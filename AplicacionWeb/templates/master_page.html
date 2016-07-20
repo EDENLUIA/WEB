@@ -1,0 +1,256 @@
+﻿{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700italic' rel='stylesheet' type='text/css'>
+
+     <title>{% block TitleText %}MVP Landing{%endblock%} </title>
+
+    
+    {% include 'head_css.html'%}
+   
+
+    <style type="text/css">
+        body {
+            font-family: calibri;
+            /*background: #e4ebe9 url({% static 'img/pattern.png' %}) repeat top left;*/
+            /* background: #e1e1e1 ;*/
+            background: #003b53 url({% static 'img/pattern_fuera.png' %}) repeat top left;
+            min-width:330px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+   
+      {% block style %}
+        
+      {% endblock %}
+    </style>
+    
+
+
+</head>
+<body>
+
+    <div class="container" style=" border-top-left-radius:12px; border-top-right-radius :12px; background: #e1e1e1 url({% static 'img/pattern.png' %}) repeat top left; -moz-box-shadow :0 0 20px #012;-webkit-box-shadow :0 0 20px #012;box-shadow: 0 0 20px #012;">
+
+        <div class="row" style=" padding:30px 15px 15px 15px; ">
+
+            
+             <div class="hidden-xs  col-sm-3 col-md-2 col-lg-2" style="text-align: right;">
+                <a href="#"><img src="{% static 'img/logo_escudo.png' %}" alt="" /></a>
+            </div>
+
+             <div class="hidden-xs col-sm-6 col-md-8 col-lg-8" style="text-align: right;">
+                <a href="#"><img src="{% static 'img/logo_mph.png' %}" alt="" /></a>
+            </div>
+
+            <div class="col-xs-12  col-sm-3 col-md-2 col-lg-2" style="text-align: center">
+                <a href="#"><img src="{% static 'img/logo_sath.png' %}" alt="" /></a>
+            </div>
+
+           
+
+           
+
+
+        </div>
+
+        <nav class="navbar" style="padding: 0px; margin-bottom: 0px;">
+            <div class="navbar-header">
+                <button type="button" style="background: #0f2a50; color:#fff; font-family: 'Cuprum', Georgia, 'Times New Roman', Times, Serif; font-size: 20px; border-radius:15px;" class="navbar-toggle collapsed btn-block" data-toggle="collapse" data-target="#mimenu">
+
+                    <span class="icon-menu3" aria-hidden="true" style="font-size: 25px; "></span> &nbsp;&nbsp;&nbsp;Menu
+                </button>
+
+            </div>
+
+            <div class="collapse navbar-collapse " id="mimenu">
+                <ul style="font-size: 15px;" class="nav nav-pills nav-justified">
+                    <li><a href="#"><span class="glyphicon glyphicon-home" style="margin-right: 10px; "></span>Inicio</a></li>
+                    <li class="dropdown mega-dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-group"></span> Nosotros <span class="caret"></span></a>
+                        <ul class="dropdown-menu mega-dropdown-menu row">
+                            <li class="col-sm-4">
+                                <div class="carousel slide" id="mislider" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="item active"><img src="img/image2.jpg" alt=""></div>
+                                        <div class="item"><img src="img/image2.jpg" alt=""></div>
+                                        <div class="item"><img src="img/image2.jpg" alt=""></div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-block btn-sath"><span class="glyphicon glyphicon-fire" style="color:orange;font-size:30px;margin-right: 10px; "></span>Visitanos en SATH</button>
+                            </li>
+                            <li class="col-sm-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                            <li class="col-sm-4">
+                                <img src="img/image2.jpg" class="img-responsive">
+                                <h3>Introduccion a bootstrap</h3>
+                                <p class="app-justificar">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Noticias</a></li>
+                    <li class="dropdown mega-dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class=" icon-file-text-o"></span> Informes <span class="caret"></span></a>
+                        <ul class="dropdown-menu mega-dropdown-menu row">
+                            <li class="col-sm-3">
+                                <div class="carousel slide" id="mislider" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="item active"><img src="img/image2.jpg" alt=""></div>
+                                        <div class="item"><img src="img/image2.jpg" alt=""></div>
+                                        <div class="item"><img src="img/image2.jpg" alt=""></div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-block btn-sath"><span class="glyphicon glyphicon-fire" style="color:orange;font-size:30px;margin-right: 10px; "></span>Visitanos en SATH</button>
+                            </li>
+                            <li class="col-sm-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                            <li class="col-sm-3">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item active">Cursos Basicos</a>
+                                    <a href="#" class="list-group-item">Less</a>
+                                    <a href="#" class="list-group-item">Android</a>
+                                    <a href="#" class="list-group-item">Laravel</a>
+                                    <a href="#" class="list-group-item">Backbone.js</a>
+                                    <a href="#" class="list-group-item">Ruy on Rails</a>
+                                    <a href="#" class="list-group-item">Responsive Design</a>
+
+                                </div>
+                            </li>
+                            <li class="col-sm-3">
+                                <img src="img/image2.jpg" class="img-responsive">
+                                <h3>Introduccion a bootstrap</h3>
+                                <p class="app-justificar">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a style="border-right: none" href="#"><span class="icon-search"></span> Transparencia</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+        <!-- {% block jumbotrom %}
+
+                <h2>Codigo desde pagina con </h2>
+
+            {% endblock%}
+        
+        {% block content %} -->
+
+        <H1>HOLA</H1>
+
+        {% endblock %}
+
+
+   
+
+            <footer style="background: #1b3647; color: #fff; min-height:200px;" >
+
+                <div class="row" style="padding-top:  10px;">
+
+                  <div class="col-xs-12  col-sm-4 col-md-4 col-lg-4" style="text-align: center;">
+                        <h4 style="text-decoration-line: underline;"> <span style="font-size: 25px;" class="icon-office"></span> Centros de Pagos  </h4>
+                        <p style="padding-top: 10px;">Oficina: Paseo La Breña Nº 539 - Hyo</p>
+                        <p>Caja Huancayo</p>
+                        <p>Interbank</p>
+                        <p>Banco Continental</p>
+                        <p>Banco de Crédito</p>
+
+                        <div style="width: 100%;"><hr align="center" width="90%" /></div>
+                    </div>
+
+                   
+
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="text-align: center;">
+                        <h4 style="text-decoration-line: underline;"> <span style="font-size: 25px;" class="icon-phone-square"></span> Contáctanos</h4>
+
+
+                        <p style="padding-top: 10px;">Dirección: Paseo La Breña Nº 539 - Hyo</p>
+                        <p>Teléfono: 064-224879</p>
+                        <p>Fax: 064-202318</p>
+                        <p>Email: webmastersath@gmail.com</p>
+                        <p>&nbsp;</p>
+
+                        <div style="width: 100%;"><hr align="center" width="90%" /></div>
+
+
+                    </div>
+
+                     <div class="col-xs-12  col-sm-4 col-md-4 col-lg-4" style="text-align: center">
+
+                        <h4 style="text-decoration-line: underline;"> <span style="font-size: 25px;" class="icon-slideshare"></span> Horario de Atención </h4>
+
+                        <p style="padding-top: 10px;">Lunes a Viernes :</p>
+                        <p>Mañanas :  8:00 am - 1:00 pm </p>
+                        <p> Tardes : 2:50 pm - 5:45 pm</p>
+
+                        <p>Sabados :</p>
+                        <p>Mañanas :  8:30 am - 12:35 pm</p>
+
+
+                        <div style="width: 100%;"><hr align="center" width="90%" /></div>
+
+                    </div>
+
+                  
+
+                </div>
+
+            </footer>
+
+
+    </div>
+
+
+    {% include 'javascript.html'%}
+
+    <script type="text/javascript">
+        $(function () {
+            $(".demo1").bootstrapNews({
+                newsPerPage: 3,
+                autoplay: true,
+                pauseOnHover: true,
+                direction: 'up',
+                newsTickerInterval: 3000,
+                onToDo: function () {
+                    //console.log(this);
+                }
+            });
+
+        });
+
+
+    </script>
+
+   <script src="owl-carousel/"></script>
+
+    <!-- Frontpage Demo -->
+    <script>
+
+    $(document).ready(function($) {
+      $("#owl-example").owlCarousel({
+
+// Most important owl features
+
+//Autoplay
+autoPlay : 3000,
+stopOnHover : true
+});
+    });
+
+
+   
+
+    </script>
+
+</body>
+</html>

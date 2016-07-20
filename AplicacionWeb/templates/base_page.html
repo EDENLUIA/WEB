@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700italic' rel='stylesheet' type='text/css'>
+
+    <title>{% block TitleText %}MVP Landing{%endblock%} </title>
+    
+    {% include 'head_css.html'%}
+    <style>
+
+    </style>
+
+    <style type="text/css">
+    
+    html{
+          font-family: calibri;
+          background: #e4ebe9 url({% static 'img/pattern.png' %}) repeat top left;
+        }
+        body
+        {background: rgba(0,0,0,0.07);}
+
+      {% block style %}
+        
+      {% endblock %}
+
+
+    </style>
+    
+    
+  </head>
+
+  <body>
+
+
+  <!-- <header>
+  
+
+
+
+<div class="col-xs-8 col-sm-4 col-md-3 col-lg-4" style="min-height: 120px;">
+  
+    <a href="#" class="navbar-brand"><img  src="{% static 'img/logo_sath.png' %}" alt=""/></a> 
+
+</div>
+
+
+
+
+
+  </header> -->
+  <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mimenu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="#">Academia</a>
+        </div>
+        <div class="collapse navbar-collapse" id="mimenu">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li class="dropdown mega-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cursos <span class="caret"></span></a>
+              <ul class="dropdown-menu mega-dropdown-menu row navbar-nav">
+                <li class="col-sm-3">
+                  <ul>
+                    <li class="dropdown-header">Nuevos cursos</li> 
+                    <!--Insertamos aquí nuestro carrusel -->                           
+                      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="item">
+                              <a href="#"><img src="http://placehold.it/254x150/563d7c/f5f5f5/&text=Bootstrap" class="img-responsive" alt="curso bootstrap"></a>
+                              <h4><small>Aprende Bootstrap 3.</small></h4>                                        
+                              <button class="btn btn-primary" type="button">10,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-book"></span> Acceder al curso</button>       
+                          </div>
+                          <div class="item">
+                              <a href="#"><img src="http://placehold.it/254x150/ffd940/f5f5f5/&text=JS+Ajax" class="img-responsive" alt="javascript ajax"></a>
+                              <h4><small>Aprende Javascript + Ajax.</small></h4>                                        
+                              <button class="btn btn-primary" type="button">29,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-book"></span> Acceder al curso</button>       
+                          </div>
+                          <div class="item">
+                              <a href="#"><img src="http://placehold.it/254x150/8892BF/f5f5f5/&text=PHP" class="img-responsive" alt="product 2"></a>
+                              <h4><small>Aprende PHP.</small></h4>                                        
+                              <button class="btn btn-primary" type="button">24,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-book"></span> Acceder al curso</button>        
+                          </div>
+                          <div class="item active">
+                              <a href="#"><img src="http://placehold.it/254x150/0769AD/f5f5f5/&text=jQuery" class="img-responsive" alt="product 3"></a>
+                              <h4><small>Aprende jQuery.</small></h4>                                        
+                              <button class="btn btn-primary" type="button">13,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-book"></span> Acceder al curso</button>      
+                          </div>                               
+                        </div>
+                      </div>
+                    <!-- Fin carrusel -->
+                  </ul>
+                </li>
+                <li class="col-sm-3">
+                  <ul>
+                    <li class="dropdown-header">Javascript</li>
+                    <li><a href="#">Introducción</a></li>
+                    <li><a href="#">Programación básica</a></li>
+                    <li><a href="#">Programación avanzada</a></li>
+                    <li><a href="#">DOM (Document Object Model)</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Formularios</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Ajax</li>
+                    <li><a href="#">Utilidades</a></li>
+                    <li><a href="#">Seguridad</a></li>
+                    <li><a href="#">Autocompletar</a></li>
+                  </ul>
+                </li>
+                <li class="col-sm-3">
+                  <ul>
+                    <li class="dropdown-header">Bootstrap 3</li>
+                    <li><a href="#">Sistema de rejillas</a></li>
+                    <li><a href="#">Tipografía</a></li>
+                    <li><a href="#">Elementos CSS</a></li>
+                    <li><a href="#">Formularios</a></li>
+                    <li><a href="#">Componentes</a></li>
+                    <li><a href="#">Plugins de Javascript</a></li>
+                    <li><a href="#">Diseño responsivo</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Jquery</li>
+                    <li><a href="#">Funciones y métodos básicos</a></li>
+                    <li><a href="#">Funciones para eventos</a></li>
+                    <li><a href="#">Funciones para efectos visuales</a></li>
+                    <li><a href="#">Funciones para Ajax</a></li>
+                    <li><a href="#">Funciones para CSS</a></li>
+                  </ul>
+                </li>
+                <li class="col-sm-3">
+                  <ul>
+                    <li class="dropdown-header">PHP 5</li>
+                    <li><a href="#">Variables</a></li>
+                    <li><a href="#">Tipos de dato</a></li>
+                    <li><a href="#">Cadenas</a></li>
+                    <li><a href="#">Operadores</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Inicia sesión</li>
+                    <form class="form" role="form">
+                      <div class="form-group">
+                        <label class="sr-only" for="user">Usuario o email</label>
+                        <input type="text" class="form-control" id="user" placeholder="Usuario o email">
+                        <label class="sr-only" for="pass">Contraseña</label>
+                        <input type="password" class="form-control" id="pass" placeholder="Contraseña">
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                    </form> 
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        </div>
+      </nav>
+  
+
+
+
+    {% block jumbotrom %}
+
+        <h2>Codigo desde pagina con </h2>
+        
+    {% endblock%}
+
+
+    <div class="container">
+
+      
+
+      {% block content %}
+      
+      <H1>HOLA</H1>
+
+      {% endblock %}
+
+      <!-- Main component for a primary marketing message or call to action -->
+      
+
+    </div> <!-- /container -->
+
+    {% include 'javascript.html'%}
+   
+  </body>
+</html>
